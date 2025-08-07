@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Login_page</title>
+       
+    </head>
+
+    <body>
+        <style>
+            
+            body{
+                background-color: #F3E2C7;
+            }
+            .entire{
+                
+                display:flex;
+                flex-direction:row;           
+                border-width:4px;
+                max-width: 900px; 
+                height: fit-content;
+                justify-content:space-between;
+                justify-items: center;
+                align-items: flex-start;
+                margin:auto;
+                margin-top:100px;
+                box-shadow:2px 2px 2px 2px darkgoldenrod ;
+                
+            }
+            .writing{
+                flex:1;                
+                border:solid black;
+                align-items: flex-start;
+                padding-right: 10px;
+                height: auto;
+                
+
+            }
+            .img-row{
+                flex:1;
+                margin-top:0px;
+                border:solid black;
+                align-items: flex-start;
+                
+                
+            }
+            
+            h1{
+                
+                font-size:50px;
+                padding:10px;
+                text-align: center;
+                margin:0;
+                
+            }
+
+            p{
+                font-size: 30px;
+
+            }
+            
+            button{
+                padding:10px;
+                margin-top:45px;
+                background-color: darkgray;                
+            }
+            button:hover{
+                background-color:darkgoldenrod ;
+            }
+            
+            </style>
+
+
+   <center>         <div class="entire">        
+                <div class="img-row">
+                <img width="452.6" height="440"src="https://www.haldirams.com/media/wysiwyg/Sugar_Free_Mobile_480x600.jpg">
+               </div>
+               
+               <div class="writing"><form onsubmit="printLog()"><center>
+                
+                    <h3>Username</h3>
+                    <input type="text"placeholder="Enter here" id="name"></label>
+
+                
+                    <h3>Type of sweet</h3>
+                    <input type="text" placeholder="Enter here" id="Type_of_sweet">
+
+                
+                    <h3>address</h3>
+                    <input type="text" placeholder="Enter here" id="address">
+
+                
+                    <h3>Quantity</h3>
+                    <input type="number"placeholder="Enter"id="quantity"></center>  
+                
+                <br>
+                <center><button type="submit">Submit</button></center> 
+
+            </form></div></div> </center>
+
+       <script>
+            
+                function printLog(){
+                  var nameNode=document.getElementById('name');
+                  var Type_of_sweetNode=document.getElementById('Type_of_sweet');
+                  var addressNode=document.getElementById('address');
+                  var quantityNode=document.getElementById('quantity');
+                 
+                 
+                  var name=nameNode.value;
+                  var Type_of_sweet=Type_of_sweetNode.value;
+                  var address=addressNode.value;
+                  var quantity=quantityNode.value;
+                 
+
+                  console.log(`Name ${name}`)
+                  console.log(`Types_of_sweet ${Type_of_sweet}`)
+                  console.log(`Address ${address}`)
+                  console.log(`Quantity ${quantity}`)
+
+                  if(!name||!Type_of_sweet||!address||!quantity){
+                      alert('please fill all the details')
+                  }else{
+                    alert('your order has been placed') 
+                  }
+                }
+
+
+                
+        </script>
+       
+    </body>
+    
+
+</html>
