@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 2px;
+        }
+        h1 img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .container {
+            width: 400px;
+            background-color: rgb(187, 50, 50);
+            margin: 30px auto;
+            /* padding: 20px; */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: whitesmoke;
+            height: 500px;
+        }
+        .container input {
+            margin-top: 5px;
+            padding: 5px;
+            width: 80%;
+        }
+        button {
+            padding: 5px;
+            
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/788/814/small_2x/icon-symbol-or-website-admin-social-login-element-concept-3d-rendering-png.png"
+        width="70" height="70">
+        Login
+    </h1>
+
+    <div class="container">
+        <form onsubmit="printLog()">
+            
+            <h3>Username</h3>
+            <input type="text" placeholder="Enter here" id="name">
+
+            <h3>Email</h3>
+            <input type="text" placeholder="Enter here" id="email">
+
+            <h3>Password</h3>
+            <input type="password" placeholder="Enter here" id="password">
+
+            <h3>Age</h3>
+            <input type="number" placeholder="Enter" id="age">
+
+            
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function printLog() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var age = document.getElementById('age').value;
+            
+
+            console.log(`Name: ${name}`);
+            console.log(`Email: ${email}`);
+            console.log(`Password: ${password}`);
+            console.log(`Age: ${age}`);
+            
+
+            
+            if(!name||!email||!password||!age){
+                alert('please fill all the details')
+            }else{
+                
+            window.open("file:///C:/Users/nisar/OneDrive/Documents/Desktop/day2/chocolate.html", "_blank");
+            }
+
+        }
+    </script>
+</body>
+</html>
